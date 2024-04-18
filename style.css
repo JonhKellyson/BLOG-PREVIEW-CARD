@@ -1,0 +1,124 @@
+@charset "UIF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --fonte: "Figtree", sans-serif;
+    --fontesmall: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
+    --corfundo: hsl(47, 88%, 63%);
+    --corbranca: hsl(0, 0%, 100%);
+    --corcinza: hsl(0, 0%, 50%);
+    --corpreta: hsl(0, 0%, 7%);
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--fonte);
+}
+
+
+.main-page {
+    background-color: var(--corfundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* CARD - CARTÃO */
+
+
+.container {
+    background-color: var(--corbranca);
+    border: 1px solid var(--corpreta);
+    border-radius: 17px;
+    box-shadow: 6px 7px var(--corpreta);
+    max-width: 335px;
+    max-height: 480px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: auto;
+}
+
+.card-image img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/*CONTEÚDO DO CARD - CONTENT CARD */
+
+.content-card h4.title{
+    background-color: var(--corfundo);
+    border-radius: 3px;
+    font-size: var(--fontesmall);
+    font-weight: 800;
+    display: inline;
+    line-height: 150%;
+    padding: 4px 12px;
+}
+
+.content-card p.date {
+    margin: 16px 0;
+    font-weight: 600;
+}
+
+.content-card h3.title-content {
+    margin-bottom: 12px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.content-card p.content {
+    color: var(--corcinza);
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.autor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.800rem;
+    font-size: 0.875rem;
+}
+
+.autor img {
+    width: 30px;
+    height: auto;
+}
+
+p.nome-autor {
+    color: var(--corpreta);
+    font-weight: 800;
+}
+
+
+/* Rodapé */
+
+.attribution {
+    margin-left: auto;
+    padding: 1rem;
+    font-size: 11px; 
+    text-align: center;
+    align-self: flex-end;
+
+    background-color: var(--corfundo);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .container{
+        display: block;
+        max-width: 335px;
+        max-height: 480px;
+    }
+}
